@@ -35,9 +35,8 @@ To install and run the project locally:
    ```bash
    python app.py
    ```
-   ```bas
 
-5. Access the application by navigating to:
+5. Access the application by llm-visulaizer:
    ```bash
    npm start
    ```
