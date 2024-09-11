@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# LLM Visualizer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+LLM Visualizer is an interactive web application that visualizes the attention layers of large language models (LLMs). This tool helps users explore how LLMs process and attend to various parts of the input text during inference.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Visualize Attention Heads**: Easily see which tokens get attended to across different layers and heads in the model.
+- **Interactive User Interface**: Intuitive design with interactive plots to explore attention patterns.
+- **Model Agnostic**: Can work with any transformer-based language model.
+- **Customizable Visualizations**: Users can adjust the display settings, including token highlights, attention matrix resolution, and more.
+  
+## Installation
 
-### `npm start`
+To set up the project locally, follow the steps below:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/pierizvi/llm-visualizer.git
+   cd llm-visualizer
+   ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Set up a Python virtual environment:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
 
-### `npm test`
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Run the application:
+   ```bash
+   python app.py
+   ```
 
-### `npm run build`
+5. Open the app in your browser:
+   ```
+   http://localhost:5000
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Load Model**: Select a pre-trained transformer model, or load your own.
+2. **Input Text**: Enter a sentence or passage for the model to process.
+3. **View Attention**: Explore the attention layers, heads, and token interactions visualized in an intuitive interface.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## File Structure
 
-### `npm run eject`
+- `app.py`: The main application file to start the web server.
+- `static/`: Contains static files like CSS and JavaScript for the front-end.
+- `templates/`: HTML templates for rendering the interface.
+- `visualization.py`: Contains logic to process and visualize attention data.
+- `models/`: Code related to loading and interacting with the language models.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Dependencies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Python 3.7+
+- Flask
+- Transformers (Hugging Face)
+- Matplotlib
+- Plotly
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Contributing
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Feel free to submit issues and pull requests to improve this project. Contributions are welcome!
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project is licensed under the MIT License.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Let me know if you'd like any adjustments!
