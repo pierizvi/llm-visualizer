@@ -1,17 +1,17 @@
 # LLM Visualizer
 
-LLM Visualizer is an interactive web application that visualizes the attention layers of large language models (LLMs). This tool helps users explore how LLMs process and attend to various parts of the input text during inference.
+LLM Visualizer is a web-based tool that visualizes the internal attention mechanisms of large language models (LLMs). This interactive interface allows users to explore how transformer models process and focus on different tokens during inference.
 
 ## Features
 
-- **Visualize Attention Heads**: Easily see which tokens get attended to across different layers and heads in the model.
-- **Interactive User Interface**: Intuitive design with interactive plots to explore attention patterns.
-- **Model Agnostic**: Can work with any transformer-based language model.
-- **Customizable Visualizations**: Users can adjust the display settings, including token highlights, attention matrix resolution, and more.
-  
+- **Attention Head Visualization**: Explore how each attention head operates across layers.
+- **Token Interactions**: Visualize the attention distribution between different input tokens.
+- **Layer-wise Exploration**: Analyze attention patterns at each layer of the transformer.
+- **Custom Models**: Supports custom transformer models using Hugging Face’s `transformers` library.
+
 ## Installation
 
-To set up the project locally, follow the steps below:
+To install and run the project locally:
 
 1. Clone the repository:
    ```bash
@@ -19,13 +19,14 @@ To set up the project locally, follow the steps below:
    cd llm-visualizer
    ```
 
-2. Set up a Python virtual environment:
+2. Create and activate a virtual environment:
    ```bash
    python3 -m venv venv
-   source venv/bin/activate
+   source venv/bin/activate  # For Linux/macOS
+   venv\Scripts\activate  # For Windows
    ```
 
-3. Install dependencies:
+3. Install the required dependencies:
    ```bash
    pip install -r requirements.txt
    ```
@@ -34,42 +35,44 @@ To set up the project locally, follow the steps below:
    ```bash
    python app.py
    ```
+   ```bas
 
-5. Open the app in your browser:
-   ```
-   http://localhost:5000
+5. Access the application by navigating to:
+   ```bash
+   npm start
    ```
 
 ## Usage
 
-1. **Load Model**: Select a pre-trained transformer model, or load your own.
-2. **Input Text**: Enter a sentence or passage for the model to process.
-3. **View Attention**: Explore the attention layers, heads, and token interactions visualized in an intuitive interface.
+1. **Load a Pre-trained Model**: Select any Hugging Face transformer model or load your own fine-tuned model.
+2. **Input Text**: Enter a sentence or a passage to visualize the attention heads and layers for each token.
+3. **Interactive Exploration**: Click through layers and heads to explore attention patterns and token dependencies.
 
-## File Structure
+## Project Structure
 
-- `app.py`: The main application file to start the web server.
-- `static/`: Contains static files like CSS and JavaScript for the front-end.
-- `templates/`: HTML templates for rendering the interface.
-- `visualization.py`: Contains logic to process and visualize attention data.
-- `models/`: Code related to loading and interacting with the language models.
+- **`app.py`**: Flask-based web server for running the application.
+- **`static/`**: Frontend assets such as JavaScript, CSS, and images.
+- **`templates/`**: HTML templates for the web interface.
+- **`visualization.py`**: Core logic for handling model inference and generating visualizations.
+- **`models/`**: Code related to loading and processing transformer models.
 
 ## Dependencies
 
 - Python 3.7+
 - Flask
-- Transformers (Hugging Face)
+- Hugging Face `transformers`
 - Matplotlib
 - Plotly
 
+To install additional dependencies:
+```bash
+pip install transformers flask torch matplotlib plotly
+```
+
 ## Contributing
 
-Feel free to submit issues and pull requests to improve this project. Contributions are welcome!
+Contributions are welcome! Feel free to submit issues and pull requests to enhance the project.
 
 ## License
 
 This project is licensed under the MIT License.
-
----
-
-Let me know if you'd like any adjustments!
